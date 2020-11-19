@@ -1,0 +1,13 @@
+{
+  "configs": {
+    "version": "0.0.2"
+  },
+  "data": {
+    "en": {
+      "common": {
+        "next": "Next Yes!",
+        "done": "Done",
+      }
+    }  
+  }
+}
