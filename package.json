@@ -1,0 +1,34 @@
+{
+	"name": "git-playground",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"postversion": "react-native-version -B"
+	},
+	"dependencies": {
+		"react-native": "0.60.5"
+	},
+	"devDependencies": {
+		"react-native-version": "^4.0.0"
+	},
+	"jest": {
+		"preset": "react-native",
+		"moduleFileExtensions": [
+			"ts",
+			"tsx",
+			"js",
+			"jsx",
+			"json",
+			"node"
+		]
+	},
+	"engines": {
+		"node": "10.0.0",
+		"npm": "^6.9.0"
+	},
+	"rnpm": {
+		"assets": [
+			"./assets/fonts/"
+		]
+	}
+}
