@@ -1,9 +1,9 @@
 {
 	"name": "git-playground",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-    "postversion": "react-native-version -B && git push && git push --tags && rm -rf build/temp"    
+		"postversion": "react-native-version -B && git push && git push --tags && rm -rf build/temp"
 	},
 	"dependencies": {
 		"react-native": "0.60.5"
