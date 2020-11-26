@@ -1,3 +1,10 @@
+## [0.1.2-release.1](https://github.com/cohen72/git-playground/compare/v0.1.1...v0.1.2-release.1) (2020-11-26)
+
+
+### Bug Fixes
+
+* beta for release track ([af61681](https://github.com/cohen72/git-playground/commit/af6168123598205a14a33264af606f2021a9bcce))
+
 ## [0.1.1](https://github.com/cohen72/git-playground/compare/v0.1.0...v0.1.1) (2020-11-26)
 
 
