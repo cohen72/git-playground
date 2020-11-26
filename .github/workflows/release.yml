@@ -27,7 +27,7 @@ jobs:
       # Runs a single command using the runners shell
       - uses: actions/setup-node@v1
       - run: npm ci
-      - run: npm version patch
+      - run: npx semantic-release
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
