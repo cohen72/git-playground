@@ -1,0 +1,34 @@
+{
+	"branches": [
+		"+([0-9])?(.{+([0-9]),x}).x",
+		"master",
+		{
+			"name": "release",
+			"prerelease": true
+		}
+	],
+	"plugins": [
+		"@semantic-release/commit-analyzer",
+		"@semantic-release/release-notes-generator",
+		[
+			"@semantic-release/changelog",
+			{
+				"changelogFile": "docs/CHANGELOG.md"
+			}
+		],
+		"@semantic-release/npm",
+		[
+			"@semantic-release/git",
+			{
+				"assets": [
+					"lib/**/*.*",
+          "ios/**/*.*",
+          "android/**/*.*",
+					"docs/CHANGELOG.md",
+					"package.json"
+				]
+			}
+		],
+		"@semantic-release/github"
+	]
+}
