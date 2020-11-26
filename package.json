@@ -9,7 +9,9 @@
 		"react-native": "0.60.5"
 	},
 	"devDependencies": {
-		"react-native-version": "^4.0.0"
+    "react-native-version": "^4.0.0",
+    "semantic-release": "^17.3.0",
+    "prettier": "^2.2.0"
 	},
 	"jest": {
 		"preset": "react-native",
