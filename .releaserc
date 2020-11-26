@@ -22,6 +22,8 @@
 			{
 				"assets": [
 					"lib/**/*.*",
+          "ios/**/*.*",
+          "android/**/*.*",
 					"docs/CHANGELOG.md",
 					"package.json"
 				]
