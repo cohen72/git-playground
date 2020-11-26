@@ -1,3 +1,10 @@
+## [1.0.1-release.2](https://github.com/cohen72/git-playground/compare/v1.0.1-release.1...v1.0.1-release.2) (2020-11-26)
+
+
+### Bug Fixes
+
+* dude ([b1d6da2](https://github.com/cohen72/git-playground/commit/b1d6da27967ad06b1bbfd51e0c2ee1178b738aa4))
+
 ## [1.0.1-release.1](https://github.com/cohen72/git-playground/compare/v1.0.0...v1.0.1-release.1) (2020-11-26)
 
 
