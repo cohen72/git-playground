@@ -1,3 +1,10 @@
+# 1.0.0 (2020-11-26)
+
+
+### Features
+
+* **dude:** now release ([1f1af2d](https://github.com/cohen72/git-playground/commit/1f1af2d7227668cb4e91a78d7315e692f7dfc054))
+
 ## [0.1.2-release.1](https://github.com/cohen72/git-playground/compare/v0.1.1...v0.1.2-release.1) (2020-11-26)
 
 
