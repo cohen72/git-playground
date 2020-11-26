@@ -3,7 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"scripts": {
-		"postversion": "react-native-version -B"
+    "postversion": "react-native-version -B && git push && git push --tags && rm -rf build/temp"    
 	},
 	"dependencies": {
 		"react-native": "0.60.5"
