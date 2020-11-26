@@ -3,6 +3,7 @@
 
 ### Bug Fixes
 
+* dude ([b1d6da2](https://github.com/cohen72/git-playground/commit/b1d6da27967ad06b1bbfd51e0c2ee1178b738aa4))
 * readme update ([73c1c26](https://github.com/cohen72/git-playground/commit/73c1c2679fbac1987c1f2c78829c1078f92d0e86))
 * readme update 2 ([d6ca1e2](https://github.com/cohen72/git-playground/commit/d6ca1e223751548bace7e503a37c6a2b49934c6c))
 * readme update 3 ([9ede007](https://github.com/cohen72/git-playground/commit/9ede007ed21adbb1eafba0a483dab74cf67c2d9c))
