@@ -1,9 +1,9 @@
 {
 	"branches": [
 		"+([0-9])?(.{+([0-9]),x}).x",
-		"release",
+		"master",
 		{
-			"name": "beta",
+			"name": "release",
 			"prerelease": true
 		}
 	],
