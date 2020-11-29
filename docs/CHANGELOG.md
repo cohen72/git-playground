@@ -1,3 +1,10 @@
+# [1.0.0-qa.7](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.6...v1.0.0-qa.7) (2020-11-29)
+
+
+### Bug Fixes
+
+* deez readme ([c8e8cf1](https://github.com/cohen72/git-playground/commit/c8e8cf1a692fa87ca63e660d9e11a6131d9707bc))
+
 # [1.0.0-qa.6](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.5...v1.0.0-qa.6) (2020-11-29)
 
 
