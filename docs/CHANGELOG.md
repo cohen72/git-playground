@@ -1,3 +1,11 @@
+# [1.0.0-qa.4](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.3...v1.0.0-qa.4) (2020-11-29)
+
+
+### Bug Fixes
+
+* readme ([f7b6e0e](https://github.com/cohen72/git-playground/commit/f7b6e0e215ebd8b598a4a7bc1a038903e3ceb335))
+* readme was great ([4e00419](https://github.com/cohen72/git-playground/commit/4e00419dcc9acc832355bd75c0bee0d0b7cba31e))
+
 # [1.0.0-qa.3](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.2...v1.0.0-qa.3) (2020-11-29)
 
 
