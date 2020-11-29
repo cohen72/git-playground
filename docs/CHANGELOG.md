@@ -1,3 +1,10 @@
+# [1.0.0-qa.6](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.5...v1.0.0-qa.6) (2020-11-29)
+
+
+### Bug Fixes
+
+* readme ([c8352c6](https://github.com/cohen72/git-playground/commit/c8352c64071cff61c75db3ac52c424742f3d1d3a))
+
 # 1.0.0-rc.1 (2020-11-29)
 
 
