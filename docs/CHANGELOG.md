@@ -9,6 +9,22 @@
 * make develop a pre-release branch using 'qa' within tag name ([38ed505](https://github.com/cohen72/git-playground/commit/38ed505d7ebd6ca7e9669aa96f9b5c44143a9a09))
 * react-native-version amend commit ([ca85606](https://github.com/cohen72/git-playground/commit/ca856063c37d8ac95afa44b1defeab12e5f91307))
 * react-native-version without amend ([e4e18b7](https://github.com/cohen72/git-playground/commit/e4e18b710b18896a948997b3cc726751d1f5946b))
+* readme ([d4d7927](https://github.com/cohen72/git-playground/commit/d4d792714e6bec84d5efbc6b4ee5e06f5779ce2f))
+* readme ([f7b6e0e](https://github.com/cohen72/git-playground/commit/f7b6e0e215ebd8b598a4a7bc1a038903e3ceb335))
+* readme fix ([a1f73a1](https://github.com/cohen72/git-playground/commit/a1f73a1ccf472a598c38c20a70dc67b86e5ab1d2))
+* readme was great ([4e00419](https://github.com/cohen72/git-playground/commit/4e00419dcc9acc832355bd75c0bee0d0b7cba31e))
+
+# 1.0.0-rc.1 (2020-11-29)
+
+
+### Bug Fixes
+
+* added a smiley face to the readme ([169d945](https://github.com/cohen72/git-playground/commit/169d9459e6461c13f15db0285710bae52aa4366f))
+* added back master to release flow ([7ad9455](https://github.com/cohen72/git-playground/commit/7ad94552357aff4bff8182a9b9f13f725aff190a))
+* how about no smileys ... ([ed5c92f](https://github.com/cohen72/git-playground/commit/ed5c92f767498e7e322728e2f07b7ef365103adb))
+* make develop a pre-release branch using 'qa' within tag name ([38ed505](https://github.com/cohen72/git-playground/commit/38ed505d7ebd6ca7e9669aa96f9b5c44143a9a09))
+* react-native-version amend commit ([ca85606](https://github.com/cohen72/git-playground/commit/ca856063c37d8ac95afa44b1defeab12e5f91307))
+* react-native-version without amend ([e4e18b7](https://github.com/cohen72/git-playground/commit/e4e18b710b18896a948997b3cc726751d1f5946b))
 * readme ([f7b6e0e](https://github.com/cohen72/git-playground/commit/f7b6e0e215ebd8b598a4a7bc1a038903e3ceb335))
 * readme fix ([a1f73a1](https://github.com/cohen72/git-playground/commit/a1f73a1ccf472a598c38c20a70dc67b86e5ab1d2))
 * readme was great ([4e00419](https://github.com/cohen72/git-playground/commit/4e00419dcc9acc832355bd75c0bee0d0b7cba31e))
