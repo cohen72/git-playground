@@ -3,7 +3,7 @@
 	"version": "1.0.0-qa.4",
 	"private": true,
 	"scripts": {
-		"postversion": "react-native-version -B -a --generate-build"
+		"postversion": "react-native-version -B -A --generate-build"
 	},
 	"dependencies": {
 		"react-native": "0.60.5"
