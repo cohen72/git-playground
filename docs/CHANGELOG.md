@@ -1,3 +1,10 @@
+# [1.0.0-qa.8](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.7...v1.0.0-qa.8) (2020-11-29)
+
+
+### Bug Fixes
+
+* readme ([ada03ae](https://github.com/cohen72/git-playground/commit/ada03aee94cdc0c7b577d11f0e64a012397c8b21))
+
 # [1.0.0-qa.7](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.6...v1.0.0-qa.7) (2020-11-29)
 
 
