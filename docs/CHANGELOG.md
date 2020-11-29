@@ -1,3 +1,10 @@
+# 1.0.0-qa.1 (2020-11-29)
+
+
+### Bug Fixes
+
+* make develop a pre-release branch using 'qa' within tag name ([38ed505](https://github.com/cohen72/git-playground/commit/38ed505d7ebd6ca7e9669aa96f9b5c44143a9a09))
+
 ## [1.0.1-release.1](https://github.com/cohen72/git-playground/compare/v1.0.0...v1.0.1-release.1) (2020-11-26)
 
 
