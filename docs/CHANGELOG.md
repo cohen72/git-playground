@@ -1,3 +1,12 @@
+# [1.0.0-qa.5](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.4...v1.0.0-qa.5) (2020-11-29)
+
+
+### Bug Fixes
+
+* react-native-version amend commit ([ca85606](https://github.com/cohen72/git-playground/commit/ca856063c37d8ac95afa44b1defeab12e5f91307))
+* react-native-version without amend ([e4e18b7](https://github.com/cohen72/git-playground/commit/e4e18b710b18896a948997b3cc726751d1f5946b))
+* readme fix ([a1f73a1](https://github.com/cohen72/git-playground/commit/a1f73a1ccf472a598c38c20a70dc67b86e5ab1d2))
+
 # [1.0.0-qa.4](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.3...v1.0.0-qa.4) (2020-11-29)
 
 
