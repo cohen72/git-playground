@@ -1,3 +1,10 @@
+# [1.0.0-qa.3](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.2...v1.0.0-qa.3) (2020-11-29)
+
+
+### Bug Fixes
+
+* added back master to release flow ([7ad9455](https://github.com/cohen72/git-playground/commit/7ad94552357aff4bff8182a9b9f13f725aff190a))
+
 # [1.0.0-qa.2](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.1...v1.0.0-qa.2) (2020-11-29)
 
 
