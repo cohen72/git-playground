@@ -1,3 +1,11 @@
+# [1.0.0-qa.2](https://github.com/cohen72/git-playground/compare/v1.0.0-qa.1...v1.0.0-qa.2) (2020-11-29)
+
+
+### Bug Fixes
+
+* added a smiley face to the readme ([169d945](https://github.com/cohen72/git-playground/commit/169d9459e6461c13f15db0285710bae52aa4366f))
+* how about no smileys ... ([ed5c92f](https://github.com/cohen72/git-playground/commit/ed5c92f767498e7e322728e2f07b7ef365103adb))
+
 # 1.0.0-qa.1 (2020-11-29)
 
 
