@@ -5,6 +5,10 @@
     {
       "name": "develop",
       "prerelease": "qa"
+    },
+    {
+      "name": "release",
+      "prerelease": "rc"
     }
 	],
 	"plugins": [
