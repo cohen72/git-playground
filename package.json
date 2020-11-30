@@ -1,11 +1,13 @@
 {
 	"name": "git-playground",
-	"version": "1.0.0-qa.7",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
-		"postversion": "react-native-version -B -A --generate-build"
+		"release": "semantic-release",
+		"postversion": "react-native-version --never-amend"
 	},
 	"dependencies": {
+		"@semantic-release/commit-analyzer": "^8.0.1",
 		"react-native": "0.60.5"
 	},
 	"devDependencies": {

@@ -2,6 +2,7 @@
 	"branches": [
 		"+([0-9])?(.{+([0-9]),x}).x",
 		"master",
+    "next",
     {
       "name": "develop",
       "prerelease": "qa"
@@ -11,27 +12,30 @@
       "prerelease": "rc"
     }
 	],
-	"plugins": [
-		"@semantic-release/commit-analyzer",
-		"@semantic-release/release-notes-generator",
-		[
-			"@semantic-release/changelog",
-			{
-				"changelogFile": "docs/CHANGELOG.md"
-			}
-		],
-		[
-			"@semantic-release/git",
-			{
-				"assets": [
-					"lib/**/*.*",
-          "ios/**/*.*",
-          "android/**/*.*",
-					"docs/CHANGELOG.md",
-					"package.json"
-				]
-			}
-		],
-		"@semantic-release/github"
-	]
+  "npmPublish": false,
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/npm",
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "ios/ColuConsumerRn/Info.plist",
+          "ios/ColuConsumerRn.xcodeproj/project.pbxproj",
+          "docs/CHANGELOG.md",
+          "android/app/build.gradle",
+          "package.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/github", 
+      {
+        "successComment": false,
+        "failComment": false
+      }
+    ]
+  ]	
 }
