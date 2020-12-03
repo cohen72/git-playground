@@ -1,24 +1,42 @@
 name: Deploy Release Candidate
 
 on:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
   build:
     name: Version & Release
-    if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2.3.4
+        with:
+          ref: release
+          # token: ''
+
       - run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
+
+      - name: Rebase onto develop
+        run: |
+          git merge --ff-only develop
+
       - uses: actions/setup-node@v1
-      - run: npm ci
-      - run: npx semantic-release
-      - run: git checkout develop && git merge release && git push -f
+
+      - name: Run semantic release
+        run: |
+          npm ci
+          npx semantic-release
+
+      - name: Merge back to develop and push
+        run: |
+          git checkout develop
+          git merge release
+          git push origin develop
+
         env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
