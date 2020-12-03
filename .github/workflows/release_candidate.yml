@@ -1,4 +1,4 @@
-name: Deploy Release Candidate
+name: Release Candidate
 
 on:
   workflow_dispatch:
@@ -21,6 +21,7 @@ jobs:
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
           git fetch
           git checkout release
+          git pull
           git merge --ff-only develop
 
       - uses: actions/setup-node@v1
