@@ -23,6 +23,12 @@ jobs:
           git merge --ff-only origin/develop
           git push origin release
 
+      - name: Checkout Release Again Just To Make Sure
+        uses: actions/checkout@v2.3.4
+        with:
+          ref: release
+          token: ${{ secrets.ADMIN_GH_TOKEN }}
+
       - uses: actions/setup-node@v1
 
       - name: Run semantic release
