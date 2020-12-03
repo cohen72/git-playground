@@ -19,10 +19,21 @@ jobs:
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
-          git fetch origin develop
-          git merge --no-ff origin/develop --allow-unrelated-histories
-          git status
-          git push origin release
+          # git fetch origin develop
+          # git merge --no-ff origin/develop --allow-unrelated-histories
+          # git status
+          # git push origin release
+
+      - name: Branch Merge
+        uses: everlytic/branch-merge@1.1.0
+        with:
+          github_token: ${{ secrets.ADMIN_GH_TOKEN }}
+          # Branch name or Ref that you wish to merge into the target_branch.
+          source_ref: develop
+          # Branch you are merging the source ref into.
+          target_branch: release
+          # Template to generate the commit message, see README.md for more info
+          commit_message_template: # optional, default is Merged {source_ref} into {target_branch}.
 
       - uses: actions/setup-node@v1
 
