@@ -15,13 +15,11 @@ jobs:
           ref: develop
           # token: ''
 
-      - name: Setup Git Configs
+      - name: Git Configs, Checkout Release & rebase onto develop
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
-
-      - name: Checkout Release & rebase onto develop
-        run: |
+          git fetch
           git checkout release
           git merge --ff-only develop
 
