@@ -20,10 +20,8 @@ jobs:
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
           git config pull.ff only
-          git fetch
-          git checkout release          
-          git pull
-          git merge --ff-only develop
+          git pull origin develop --allow-unrelated-histories
+          git merge release origin/develop
 
       - uses: actions/setup-node@v1
 
