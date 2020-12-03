@@ -9,7 +9,7 @@ jobs:
     name: Version & Release
     if: github.ref == 'refs/heads/release'
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v2
       - run: |
@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v1
       - run: npm ci
       - run: npx semantic-release
-      - run: git checkout develop && git merge release  
+      - run: git checkout develop && git merge release && git push -f
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
