@@ -20,7 +20,7 @@ jobs:
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
           git fetch origin develop
-          git merge --ff-only origin/develop
+          git merge --ff-only origin/develop --allow-unrelated-histories
           git push origin release
 
       - uses: actions/setup-node@v1
