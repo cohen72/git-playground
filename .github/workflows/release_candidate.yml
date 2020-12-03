@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Develop
+      - name: Checkout Release
         uses: actions/checkout@v2.3.4
         with:
-          ref: develop
+          ref: release
           # token: ''
 
       - name: Git Configs, Checkout Release & rebase onto develop
@@ -21,7 +21,6 @@ jobs:
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
           git config pull.ff only
           git pull origin develop --allow-unrelated-histories
-          git merge release origin/develop
 
       - uses: actions/setup-node@v1
 
