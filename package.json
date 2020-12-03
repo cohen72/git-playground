@@ -1,6 +1,6 @@
 {
 	"name": "git-playground",
-	"version": "1.0.2",
+	"version": "1.0.3-qa.1",
 	"private": true,
 	"scripts": {
 		"release": "semantic-release",
