@@ -20,10 +20,6 @@ jobs:
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
-          # git fetch origin develop
-          # git merge --no-ff origin/develop --allow-unrelated-histories
-          # git status
-          # git push origin release
 
       - name: Branch Merge
         uses: everlytic/branch-merge@1.1.0
@@ -47,5 +43,5 @@ jobs:
       - name: Merge back to develop and push
         run: |
           git checkout develop
-          git merge release
+          git merge --ff-only release
           git push origin develop
