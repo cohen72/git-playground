@@ -6,6 +6,7 @@ on:
 jobs:
   build:
     name: Version & Release
+    if: github.ref == 'refs/heads/release'
     runs-on: ubuntu-latest
 
     steps:
@@ -28,11 +29,8 @@ jobs:
         uses: everlytic/branch-merge@1.1.0
         with:
           github_token: ${{ secrets.ADMIN_GH_TOKEN }}
-          # Branch name or Ref that you wish to merge into the target_branch.
           source_ref: develop
-          # Branch you are merging the source ref into.
           target_branch: release
-          # Template to generate the commit message, see README.md for more info
           commit_message_template: # optional, default is Merged {source_ref} into {target_branch}.
 
       - uses: actions/setup-node@v1
