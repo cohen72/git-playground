@@ -20,14 +20,14 @@ jobs:
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
-
-      - name: Branch Merge
-        uses: everlytic/branch-merge@1.1.0
-        with:
-          github_token: ${{ secrets.ADMIN_GH_TOKEN }}
-          source_ref: develop
-          target_branch: release
-          commit_message_template: # optional, default is Merged {source_ref} into {target_branch}.
+          git merge --ff-only origin/develop
+      #  - name: Branch Merge
+      #    uses: everlytic/branch-merge@1.1.0
+      #    with:
+      #      github_token: ${{ secrets.ADMIN_GH_TOKEN }}
+      #      source_ref: develop
+      #      target_branch: release
+      #      commit_message_template: # optional, default is Merged {source_ref} into {target_branch}.
 
       - uses: actions/setup-node@v1
 
