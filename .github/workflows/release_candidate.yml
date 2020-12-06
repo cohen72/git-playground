@@ -20,6 +20,7 @@ jobs:
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
+          git fetch
           git checkout develop
           git checkout release
           git merge --ff-only develop
