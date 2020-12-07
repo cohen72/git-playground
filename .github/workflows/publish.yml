@@ -20,7 +20,6 @@ jobs:
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
-          git checkout master
       #     git fetch
       #     git checkout release
       #     git checkout master
