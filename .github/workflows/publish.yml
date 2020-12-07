@@ -1,4 +1,4 @@
-name: Release Candidate
+name: Publish Latest Release
 
 on:
   workflow_dispatch:
@@ -13,17 +13,17 @@ jobs:
       - name: Checkout Release
         uses: actions/checkout@v2.3.4
         with:
-          ref: release
+          ref: master
           token: ${{ secrets.ADMIN_GH_TOKEN }}
 
-      - name: Git Configs, Checkout Release & rebase onto develop
+      - name: Git Configs, Checkout Master & Merge Release
         run: |
           git config user.name $GITHUB_ACTOR
           git config user.email gh-actions-${GITHUB_ACTOR}@github.com
           git fetch
-          git checkout develop
           git checkout release
-          git merge --ff-only develop
+          git checkout master
+          git merge --ff-only release
 
       - uses: actions/setup-node@v1
 
@@ -39,5 +39,5 @@ jobs:
       - name: Merge back to develop and push
         run: |
           git checkout develop
-          git merge --ff-only release
+          git merge --ff-only master
           git push origin develop
