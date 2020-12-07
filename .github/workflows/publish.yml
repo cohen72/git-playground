@@ -16,13 +16,13 @@ jobs:
           ref: master
           token: ${{ secrets.ADMIN_GH_TOKEN }}
 
-      # - name: Git Configs, Checkout Master & Merge Release
-      #   run: |
-      #     git config user.name $GITHUB_ACTOR
-      #     git config user.email gh-actions-${GITHUB_ACTOR}@github.com
+      - name: Git Configs, Checkout Master & Merge Release
+        run: |
+          git config user.name $GITHUB_ACTOR
+          git config user.email gh-actions-${GITHUB_ACTOR}@github.com
       #     git fetch
       #     git checkout release
-      #     git checkout master
+          git checkout master
       #     git merge --ff-only release
 
       - uses: actions/setup-node@v1
