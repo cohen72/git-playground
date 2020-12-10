@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Version & Release
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/release'
     runs-on: ubuntu-latest
 
     steps:
