@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     name: Version & Release
-    if: github.ref == 'refs/heads/release'
+    if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
 
     steps:
@@ -26,11 +26,10 @@ jobs:
           git merge --ff-only develop
 
       - uses: actions/setup-node@v1
+      - run: npm ci
 
-      - name: Run semantic release
-        run: |
-          npm ci
-          npx semantic-release
+      - uses: codfish/semantic-release-action@master
+        id: semantic
         env:
           GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
@@ -41,3 +40,5 @@ jobs:
           git checkout develop
           git merge --ff-only release
           git push origin develop
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
