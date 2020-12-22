@@ -1,7 +1,7 @@
 {
-	"branches": [
-		"+([0-9])?(.{+([0-9]),x}).x",
-		"master",
+  "branches": [
+    "+([0-9])?(.{+([0-9]),x}).x",
+    "master",
     "next",
     {
       "name": "develop",
@@ -10,8 +10,12 @@
     {
       "name": "release",
       "prerelease": "rc"
+    },
+    {
+      "name": "beta",
+      "prerelease": true
     }
-	],
+  ],
   "npmPublish": false,
   "plugins": [
     "@semantic-release/commit-analyzer",
@@ -31,11 +35,11 @@
       }
     ],
     [
-      "@semantic-release/github", 
+      "@semantic-release/github",
       {
         "successComment": false,
         "failComment": false
       }
     ]
-  ]	
+  ]
 }
