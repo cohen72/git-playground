@@ -31,3 +31,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: If on master, merge back to beta
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git checkout beta
+          git merge --ff-only master
