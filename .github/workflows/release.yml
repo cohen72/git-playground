@@ -14,10 +14,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
-      - name Git Config
+      - name: Git Config
         run: |
-        git config user.name $GITHUB_ACTOR
-        git config user.email gh-actions-${GITHUB_ACTOR}@github.com
+          git config user.name $GITHUB_ACTOR
+          git config user.email gh-actions-${GITHUB_ACTOR}@github.com
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
