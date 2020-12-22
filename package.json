@@ -4,7 +4,7 @@
 	"private": true,
 	"scripts": {
 		"release": "semantic-release",
-		"postversion": "react-native-version --never-amend"
+		"postversion": "react-native-version"
 	},
 	"dependencies": {
 		"@semantic-release/commit-analyzer": "^8.0.1",
