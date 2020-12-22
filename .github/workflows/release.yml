@@ -37,4 +37,4 @@ jobs:
         run: |
           git checkout beta
           git merge --ff-only master
-          git push --force
+          git push --force --set-upstream origin beta
