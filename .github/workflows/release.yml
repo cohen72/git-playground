@@ -4,12 +4,11 @@ on:
   push:
     branches:
       - master
-      - beta
-      - next
+      - develop
 
 jobs:
   release:
-    name: Release
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,9 +31,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: If on master, merge back to beta
+      - name: If on master, merge back semantic release commits back to develop
         if: github.ref == 'refs/heads/master'
         run: |
-          git checkout beta
+          git checkout develop
           git merge --ff-only master
-          git push --force --set-upstream origin beta
+          git push --force --set-upstream origin develop
