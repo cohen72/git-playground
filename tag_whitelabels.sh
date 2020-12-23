@@ -21,7 +21,7 @@ fi
 latest_git_tag=$(git describe --abbrev=0)
 
 #tag all white labels
-whitelabels=(akronite internal)
+whitelabels=('akronite' 'internal')
 for white_label in "${whitelabels[@]}"
 do
   tag_name="${white_label}/${latest_git_tag}"
