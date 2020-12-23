@@ -17,6 +17,7 @@ if [ "$(git status --porcelain)" ]; then
   exit
 fi
 
+git fetch --prune --prune-tags
 #get latest git tag
 latest_git_tag=$(git describe --abbrev=0)
 
