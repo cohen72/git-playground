@@ -19,7 +19,7 @@
   "npmPublish": false,
   "plugins": [
     ["@semantic-release/commit-analyzer", {
-      "preset": "angular",
+      "preset": "atom",
       "releaseRules": [
         {"emoji": ":bug:", "release": "patch"}       
       ]
