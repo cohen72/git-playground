@@ -1,10 +1,9 @@
-
-git_branch=`git rev-parse --abbrev-ref HEAD`
-
 git checkout develop
 git merge --ff-only master
 git push --force --set-upstream origin develop
 git checkout master
+
+git_branch=`git rev-parse --abbrev-ref HEAD`
 
 # ensure on master branch
 if [ "$git_branch" != "master" ]; then
