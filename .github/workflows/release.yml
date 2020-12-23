@@ -37,4 +37,11 @@ jobs:
           git checkout develop
           git merge --ff-only master
           git push --force --set-upstream origin develop
-          .tag_whitelabels.sh
+
+      - name: Tag all white labels, if on master
+        if: github.ref == 'refs/heads/master'
+        run: |
+          # make file runnable, might not be necessary
+          chmod 755 "${GITHUB_WORKSPACE}/.tag_whitelabels.sh"
+          # run script
+          "${GITHUB_WORKSPACE}/.tag_whitelabels.sh"
