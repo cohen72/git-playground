@@ -1,6 +1,11 @@
 
 git_branch=`git rev-parse --abbrev-ref HEAD`
 
+git checkout develop
+git merge --ff-only master
+git push --force --set-upstream origin develop
+git checkout master
+
 # ensure on master branch
 if [ "$git_branch" != "master" ]; then
   echo "🙅🏻‍♀️ Not so fast buddy, Youz gotta be on the 'master' branch!"
