@@ -40,8 +40,4 @@ jobs:
 
       - name: Tag all white labels, if on master
         if: github.ref == 'refs/heads/master'
-        run: |
-          # make file runnable, might not be necessary
-          chmod 755 "whitelabels.sh"
-          # run script
-          "tag_whitelabels.sh"
+        run: sh ./tag_whitelabels.sh
