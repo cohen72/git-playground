@@ -31,13 +31,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: If on master, merge semantic release commits back to develop
-        if: github.ref == 'refs/heads/master'
-        run: |
-          git checkout develop
-          git merge --ff-only master
-          git push --force --set-upstream origin develop
-
-      - name: Tag all white labels, if on master
+      - name: If on master, complete versioning
         if: github.ref == 'refs/heads/master'
         run: sh ./tag_whitelabels.sh
