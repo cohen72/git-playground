@@ -2,6 +2,7 @@ git checkout develop
 git merge --ff-only master
 git push --force --set-upstream origin develop
 git checkout master
+git fetch --prune --prune-tags
 
 git_branch=`git rev-parse --abbrev-ref HEAD`
 
@@ -17,7 +18,6 @@ if [ "$(git status --porcelain)" ]; then
   exit
 fi
 
-git fetch --prune --prune-tags
 #get latest git tag
 latest_git_tag=$(git describe --abbrev=0)
 
