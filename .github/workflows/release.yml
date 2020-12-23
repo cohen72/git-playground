@@ -37,4 +37,4 @@ jobs:
           git checkout develop
           git merge --ff-only master
           git push --force --set-upstream origin develop
-          ./scripts/tag_all_whitelabels.sh
+          .tag_whitelabels.sh
