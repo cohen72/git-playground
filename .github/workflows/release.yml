@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Semenatic Release
+      - name: Semantic Release
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -42,6 +42,6 @@ jobs:
         if: github.ref == 'refs/heads/master'
         run: |
           # make file runnable, might not be necessary
-          chmod 755 "${GITHUB_WORKSPACE}/.tag_whitelabels.sh"
+          chmod 755 "whitelabels.sh"
           # run script
-          "${GITHUB_WORKSPACE}/.tag_whitelabels.sh"
+          "tag_whitelabels.sh"
