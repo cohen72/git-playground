@@ -47,12 +47,12 @@ jobs:
       steps.semantic.outputs.new-release-published == 'true'
     strategy:
       matrix:
-      city: [akronites, internal]
+      node: [akronites, internal]
     steps:
       - name: Add White Label Tags
         run: |
           git checkout master
-          git tag ${{matrix.city}}/v${{steps.semantic.outputs.release-version}}
-          git push origin ${{matrix.city}}/v${{steps.semantic.outputs.release-version}}
+          git tag ${{matrix.node}}/v${{steps.semantic.outputs.release-version}}
+          git push origin ${{matrix.node}}/v${{steps.semantic.outputs.release-version}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
