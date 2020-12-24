@@ -35,9 +35,9 @@ jobs:
       - name: When on Master, Merge Fast Forward Only to Develop
         if: github.ref == 'refs/heads/master'
         uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
-          with:
-            branchtomerge: master
-            branch: develop
+        with:
+          branchtomerge: master
+          branch: develop
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
