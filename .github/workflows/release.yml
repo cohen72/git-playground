@@ -39,8 +39,6 @@ jobs:
           git checkout develop
           git merge --ff-only master
           git push --force --set-upstream origin develop
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # If on master!
       - name: Add White Label Tags
