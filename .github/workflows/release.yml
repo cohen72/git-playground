@@ -47,7 +47,7 @@ jobs:
       steps.semantic.outputs.new-release-published == 'true'
     strategy:
       matrix:
-      node: [akronites, internal]
+      node: ['akronites', 'internal']
     steps:
       - name: Add White Label Tags
         run: |
