@@ -33,15 +33,21 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: If on master, merge semantic release commits back to develop
+        if: github.ref == 'refs/heads/master'
+        run: |
+          git checkout develop
+          git merge --ff-only master
+          git push --force --set-upstream origin develop
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # If on master!
       - name: Add White Label Tags
         if: |
           github.ref == 'refs/heads/master' &&
           steps.semantic.outputs.new-release-published == 'true'
         run: |
-          git checkout develop
-          git merge --ff-only master
-          git push --force --set-upstream origin develop
           git checkout master
           git tag akronites/${{steps.semantic.outputs.release-version}}
           git push origin akronites/${{steps.semantic.outputs.release-version}}
