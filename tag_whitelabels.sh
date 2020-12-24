@@ -1,6 +1,8 @@
 git checkout develop
 git merge --ff-only master
 git push --force --set-upstream origin develop
+
+get fetch master
 git checkout master
 git fetch --prune --prune-tags
 
