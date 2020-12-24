@@ -25,7 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # semantic release
       - name: Semantic Release
         uses: codfish/semantic-release-action@master
         id: semantic
@@ -33,15 +32,15 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: If on master, merge semantic release commits back to develop
+      - name: When on Master, Merge Fast Forward Only to Develop
         if: github.ref == 'refs/heads/master'
-        uses: tukasz/direct-merge-action@v2.0.2
-        with:
-          source-branch: master
-          target-branch: develop
+        uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
+          with:
+            branchtomerge: master
+            branch: develop
+        env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Add White Label Tags
       - name: Add White Label Tags
         if: |
           github.ref == 'refs/heads/master' &&
@@ -50,8 +49,8 @@ jobs:
           git checkout master
           for city in $CITIES; 
             do 
-            git tag $city/${{steps.semantic.outputs.release-version}}
-            git push origin $city/${{steps.semantic.outputs.release-version}}
+            git tag v${{steps.semantic.outputs.release-version}}-$city
+            git push origin v${{steps.semantic.outputs.release-version}}-$city
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
