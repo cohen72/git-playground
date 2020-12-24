@@ -25,7 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # semantic release
       - name: Semantic Release
         uses: codfish/semantic-release-action@master
         id: semantic
@@ -41,14 +40,19 @@ jobs:
           target-branch: develop
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Add White Label Tags
+  tag:
+    name: On Published Release, Add White Label Tags
+    if: |
+      github.ref == 'refs/heads/master' &&
+      steps.semantic.outputs.new-release-published == 'true'
+    strategy:
+      matrix:
+      city: [akronites, internal]
+    steps:
       - name: Add White Label Tags
-        if: |
-          github.ref == 'refs/heads/master' &&
-          steps.semantic.outputs.new-release-published == 'true'
         run: |
           git checkout master
-          git tag akronites/${{steps.semantic.outputs.release-version}}
-          git push origin akronites/${{steps.semantic.outputs.release-version}}
+          git tag ${{matrix.city}}/v${{steps.semantic.outputs.release-version}}
+          git push origin ${{matrix.city}}/v${{steps.semantic.outputs.release-version}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
