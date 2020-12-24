@@ -41,7 +41,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   tag:
-    name: On Published Release, Add White Label Tags
+    name: Tag white labels for published release
     if: |
       github.ref == 'refs/heads/master' &&
       steps.semantic.outputs.new-release-published == 'true'
