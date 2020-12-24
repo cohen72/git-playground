@@ -1,6 +1,6 @@
 {
 	"name": "git-playground",
-	"version": "1.0.14",
+	"version": "1.0.15-qa.1",
 	"private": true,
 	"scripts": {
 		"postversion": "react-native-version --never-amend"
