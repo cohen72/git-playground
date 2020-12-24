@@ -41,7 +41,7 @@ jobs:
           target-branch: develop
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # If on master!
+      # Add White Label Tags
       - name: Add White Label Tags
         if: |
           github.ref == 'refs/heads/master' &&
