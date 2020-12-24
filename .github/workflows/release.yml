@@ -35,10 +35,11 @@ jobs:
 
       - name: If on master, merge semantic release commits back to develop
         if: github.ref == 'refs/heads/master'
-        run: |
-          git checkout develop
-          git merge --ff-only master
-          git push --force --set-upstream origin develop
+        uses: tukasz/direct-merge-action@v2.0.2
+        with:
+          source-branch: master
+          target-branch: develop
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # If on master!
       - name: Add White Label Tags
