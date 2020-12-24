@@ -32,13 +32,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: When on Master, Merge Fast Forward Only to Develop
+      - name: If on master, merge semantic release commits back to develop
         if: github.ref == 'refs/heads/master'
-        uses: MaximeHeckel/github-action-merge-fast-forward@v1.1.0
+        uses: tukasz/direct-merge-action@v2.0.2
         with:
-          branchtomerge: master
-          branch: develop
-        env:
+          source-branch: master
+          target-branch: develop
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Add White Label Tags
