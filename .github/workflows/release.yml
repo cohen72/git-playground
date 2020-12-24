@@ -28,6 +28,9 @@ jobs:
           npm install --unsafe-perm
           npm config set unsafe-perm true
 
+      - name: chmod
+        run: chmod 755 react-native-version.sh
+
       - name: Semantic Release
         uses: codfish/semantic-release-action@master
         id: semantic
