@@ -25,6 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           npm ci
+          npm install --unsafe-perm
           npm config set unsafe-perm true
 
       - name: Semantic Release
