@@ -25,13 +25,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # semantic release
       - name: Semantic Release
-        run: npx semantic-release
+        uses: codfish/semantic-release-action@master
+        id: semantic
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: If on master, complete versioning
-        if: github.ref == 'refs/heads/master'
-        run: sh ./tag_whitelabels.sh
-        shell: bash
+      # If on master
+      - name: Upload to S3 QA
+        if: |
+          github.ref == 'refs/heads/master' &&
+          steps.semantic.outputs.new-release-published == 'true' &&
+        run: |
+          git checkout develop
+          git merge --ff-only master
+          git push --force --set-upstream origin develop
+          git tag akronites/${{steps.semantic.outputs.release-version}}
+          git push origin akronites/${{steps.semantic.outputs.release-version}}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
