@@ -25,9 +25,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Grant permissions - chmod react-native-version.sh
-        run: |
-          chmod +x ./react-native-version.sh
+      - name: Unsafe-perm
+        run: npm install --unsafe-perm
 
       - name: Semantic Release
         uses: codfish/semantic-release-action@master
