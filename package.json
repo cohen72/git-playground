@@ -3,10 +3,7 @@
 	"version": "1.0.17-qa.2",
 	"private": true,
 	"scripts": {
-		"postversion": "./react-native-version.sh"
-	},
-	"config": {
-		"unsafe-perm": true
+		"postversion": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [ $branch == \"test1\" ]; then react-native-version --never-amend; else react-native-version --never-amend --never-increment-build; fi;"
 	},
 	"dependencies": {
 		"@semantic-release/commit-analyzer": "^8.0.1",
