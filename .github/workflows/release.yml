@@ -45,7 +45,7 @@ jobs:
       - name: Add White Label Tags
         if: |
           github.ref == 'refs/heads/master' &&
-          steps.semantic.outputs.new-release-published == 'true'
+          steps.semantic.outputs.new_release_published == 'true'
         run: |
           git checkout master
           for city in $CITIES; 
