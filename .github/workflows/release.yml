@@ -5,6 +5,7 @@ on:
     branches:
       - master
       - develop
+      - '*.*'
 
 jobs:
   release:
@@ -23,13 +24,14 @@ jobs:
         uses: actions/setup-node@v1
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm ci
 
       - name: Semantic Release
-        uses: codfish/semantic-release-action@master
+        uses: cycjimmy/semantic-release-action@v2
         id: semantic
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ADMIN_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: If on master, merge semantic release commits back to develop
