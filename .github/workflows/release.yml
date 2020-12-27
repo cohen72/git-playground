@@ -42,7 +42,7 @@ jobs:
           target-branch: develop
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Add White Label Tags
+      - name: If on master, add white label tags
         if: |
           github.ref == 'refs/heads/master' &&
           steps.semantic.outputs.new_release_published == 'true'
@@ -50,8 +50,8 @@ jobs:
           git checkout master
           for city in $CITIES; 
             do 
-            git tag v${{steps.semantic.outputs.release-version}}-$city
-            git push origin v${{steps.semantic.outputs.release-version}}-$city
+            git tag v${{steps.semantic.outputs.new_release_version}}-$city
+            git push origin v${{steps.semantic.outputs.new_release_version}}-$city
           done
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
