@@ -3,7 +3,7 @@
 	"version": "1.0.17-qa.5",
 	"private": true,
 	"scripts": {
-		"postversion": "./react-native-version.sh"
+		"postversion": "bash ./react-native-version.sh"
 	},
 	"dependencies": {
 		"@semantic-release/commit-analyzer": "^8.0.1",
