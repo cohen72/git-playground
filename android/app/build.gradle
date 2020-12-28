@@ -148,8 +148,8 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         missingDimensionStrategy "RNN.reactNativeVersion", "reactNative60" // See note below!
-        versionCode 150
-        versionName "1.1.1"
+        versionCode 151
+        versionName "1.2.0-qa.1"
         multiDexEnabled true
         resValue "string", "build_config_package", "com.colu.newcities"
     }
