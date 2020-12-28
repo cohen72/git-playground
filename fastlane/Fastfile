@@ -1,0 +1,38 @@
+
+require "net/http"
+require "openssl"
+require "json"
+fastlane_require "dotenv"
+
+before_all do |lane, options|
+  ENV["JIRA_USER"] = "yehuda@colu.com"
+  ENV["JIRA_API_TOKEN"] = "Z8bj30qCy9uRzOaGG3mWB1ED"
+end
+
+def get_active_jira_sprint
+  uri = URI("https://colucom.atlassian.net/rest/agile/1.0/board/54/sprint?state=active&maxResults=1")
+  Net::HTTP.start(uri.host, uri.port,
+                  use_ssl: uri.scheme == "https",
+                  verify_mode: OpenSSL::SSL::VERIFY_NONE) do |http|
+    request = Net::HTTP::Get.new uri.request_uri
+    request.basic_auth ENV["JIRA_USER"], ENV["JIRA_API_TOKEN"]
+    response = http.request request # Net::HTTPResponse object
+    json = JSON.parse(response.body)
+    sprint_name = json["values"][0]["name"].gsub(/Sprint\s/, "")
+    return sprint_name
+  end
+end
+
+lane :print_sprint do
+  package_json = read_json(json_path: "package.json")
+  sem_ver = package_json[:version]
+  major, minor = sem_ver.split(".")
+  jira_active_sprint_number = get_active_jira_sprint
+  if jira_active_sprint_number > minor
+    updated_version = "#{major}.#{jira_active_sprint_number}.0"
+    puts "LET'S BUMP VERSION(#{sem_ver}) TO BE CURRENT WITH JIRA'S SPRINT(#{updated_version})"
+    sh(" npm version #{updated_version} --no-git-tag-version")
+  else
+    puts "NO MINOR VERSION CHANGE NECESSARY"
+  end
+end
