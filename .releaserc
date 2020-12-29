@@ -30,18 +30,18 @@
 				"message": "chore(release): ${nextRelease.version} \n\n${nextRelease.notes}"
 			}
 		],
+    ["semantic-release-jira-releases", {
+      "projectId": "FT",
+      "releaseNameTemplate": "Test v${version}",
+      "jiraHost": "colucom.atlassian.net",
+      "ticketPrefixes": [ "FT" ]      
+    }],
 		[
 			"@semantic-release/github",
 			{
 				"successComment": false,
 				"failComment": false
 			}
-    ],
-    ["semantic-release-jira-releases", {
-      "projectId": "FT",
-      "releaseNameTemplate": "Test v${version}",
-      "jiraHost": "colucom.atlassian.net",
-      "ticketPrefixes": ["FT"]      
-    }]
+    ]
 	]
 }
