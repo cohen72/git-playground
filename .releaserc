@@ -41,8 +41,7 @@
       "projectId": "FT",
       "releaseNameTemplate": "Test v${version}",
       "jiraHost": "colucom.atlassian.net",
-      "ticketPrefixes": ["FT"],
-      "ticketRegex": "[a-zA-Z]{3,5}-\\d{3,5}"
+      "ticketPrefixes": ["FT"]      
     }]
 	]
 }
