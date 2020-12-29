@@ -20,10 +20,14 @@ module.exports = {
 			{
 				writerOpts: {
 					// headerPartial: 'DUDE!',
-					transform: (commit, context) => {
+					finalizeContext: (context, options, commits, keyCommit) => {
 						context.title = 'YEUUUUUH';
 						return context;
 					},
+					// transform: (commit, context) => {
+					// 	context.title = 'YEUUUUUH';
+					// 	return context;
+					// },
 				},
 			},
 		],
