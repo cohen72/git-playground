@@ -21,7 +21,7 @@ module.exports = {
 				writerOpts: {
 					// headerPartial: 'DUDE!',
 					finalizeContext: (context, options, commits, keyCommit) => {
-						context.title = 'YEUUUUUH';
+						context.title = 'Sprint 31';
 						return context;
 					},
 					// transform: (commit, context) => {
