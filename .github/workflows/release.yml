@@ -33,6 +33,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.ADMIN_GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          JIRA_AUTH: ${{ secrets.JIRA_AUTH }}
 
       - name: If on master, merge semantic release commits back to develop
         if: github.ref == 'refs/heads/master'
