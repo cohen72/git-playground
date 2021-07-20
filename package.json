@@ -9,7 +9,7 @@
 		"@semantic-release/commit-analyzer": "^8.0.1",
 		"conventional-changelog-angular": "^5.0.12",
 		"conventional-changelog-atom": "^2.0.8",
-		"react-native": "0.60.5"
+		"react-native": "0.62.3"
 	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^5.0.1",
