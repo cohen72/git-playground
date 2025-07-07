@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.nanit.baby.app.staging",
+    "sha256_cert_fingerprints":
+    ["2E:77:EC:03:BD:4B:70:22:5B:1B:5B:4F:4A:B4:15:57:AF:60:48:EC:9C:28:A8:84:B4:84:C9:73:0E:5E:3E:59"]
+  }
+}]
